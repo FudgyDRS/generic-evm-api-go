@@ -1,0 +1,8 @@
+{
+  "builds": [
+    { "src": "api/handler.go", "use": "@vercel/go" }
+  ],
+  "routes": [
+    { "src": "", "dest": "api/handler.go" }
+  ]
+}
