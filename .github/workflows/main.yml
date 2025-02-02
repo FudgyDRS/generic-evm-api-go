@@ -17,21 +17,31 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.20'
+          go-version: '1.22'  # Updated to match your go.mod version
 
       - name: Build Go API
         run: go build -v ./...
 
-      - name: Run Go API
-        run: nohup go run main.go &
+      - name: Install Go dependencies
+        run: go mod download
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install NPM dependencies
+        working-directory: ./test  # Set working directory to where package.json is
         run: npm install
 
+      - name: Run Go API in background
+        run: |
+          go run main.go &
+          # Wait for the API to start (adjust sleep time as needed)
+          sleep 10
+
       - name: Run TypeScript Tests
-        run: ./run.sh
+        working-directory: ./test  # Set working directory to where run.sh is
+        run: |
+          chmod +x run.sh
+          ./run.sh
