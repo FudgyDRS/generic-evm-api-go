@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	utils "api/pkg/utils"
+	utils "generic-evm-api-go/api/pkg/utils"
 
 	"github.com/sirupsen/logrus"
 )

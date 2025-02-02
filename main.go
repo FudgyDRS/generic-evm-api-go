@@ -11,7 +11,7 @@ import (
 
 	"github.com/joho/godotenv"
 
-	handler "api/api"
+	handler "generic-evm-api-go/api/api"
 )
 
 type CustomLogFormatter struct{}

@@ -1,10 +1,10 @@
 package handler
 
 import (
-	"api/pkg/utils"
 	"context"
 	"encoding/hex"
 	"fmt"
+	"generic-evm-api-go/api/pkg/utils"
 	"net/http"
 	"strconv"
 	"strings"

@@ -1,6 +1,6 @@
 package handler
 
-import utils "api/pkg/utils"
+import utils "generic-evm-api-go/api/pkg/utils"
 
 type GetEvmContractExtCodeSizeRequestParams struct {
 	ChainId string `query:"chain-id"`

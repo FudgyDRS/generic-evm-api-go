@@ -1,10 +1,10 @@
 package handler
 
 import (
-	utils "api/pkg/utils"
 	"context"
 	"encoding/hex"
 	"fmt"
+	utils "generic-evm-api-go/api/pkg/utils"
 	"math/big"
 	"strings"
 
