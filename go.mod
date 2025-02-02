@@ -1,6 +1,6 @@
 module generic-evm-api-go
 
-go 1.23.4
+go 1.23
 
 require (
 	github.com/ethereum/go-ethereum v1.14.13
