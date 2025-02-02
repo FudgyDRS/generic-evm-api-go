@@ -3,6 +3,6 @@
     { "src": "api/api/handler.go", "use": "@vercel/go" }
   ],
   "routes": [
-    { "src": "", "dest": "api/api/handler.go" }
+    { "src": "/v1", "dest": "api/api/handler.go" }
   ]
 }
